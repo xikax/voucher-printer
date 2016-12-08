@@ -7,7 +7,7 @@ class PDF extends FPDF
 // Load data
 function LoadData($file)
 {
-	
+
     $data = file($file);
     $data = preg_replace('/"/','', $data);
     return $data;
@@ -16,18 +16,18 @@ function LoadData($file)
 // Simple table
 function BasicTable($data, $start, $count)
 {
-	for($i=$start; $i<count($data)-(count($data)-($start+$count)); $i++) 
+	for($i=$start; $i<count($data)-(count($data)-($start+$count)); $i++)
 		{
         	$this->Cell(80,15,$data[$i],1,0,'C');
         	$this->Ln();
-    		}	
+    		}
 	}
 }
 
 if($_POST['weeks'] == 1)
 	{
 	$file = 'vouchers1.csv';
-	$output = 'start_vr1.txt';	
+	$output = 'start_vr1.txt';
 	}
 else
 	{

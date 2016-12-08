@@ -1,28 +1,18 @@
-<?php
-
-#$url = '10.10.10.47/';
-$pid = $_GET['pid'];
-$seite = '404.php';
-include('header.php');
-include('menu.php');
-
-
-if($pid == 1)
-{
-	$seite = 'seite1.php';
-}
-else
-{
-	$seite = '404.php';
-}
-
-?>
-
-<?php
-
-include($seite);
-
-?>â
-<?php
-include('footer.php');
-?>
+<div class="content">
+<form action="prntvchr.php" method="post">
+<br>
+<br>
+Tickets for
+<select name="weeks">
+	<option value="1">1</option>
+	<option value="2">2</option>
+</select>
+Weeks.
+<br>
+<br>
+How many:
+<input type="number" name="count">
+<br>
+<input type="submit" name="generate" value="generate Tickets">
+</form>
+</div>
